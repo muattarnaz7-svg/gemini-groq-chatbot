@@ -1,0 +1,4 @@
+google-genai
+websockets<16
+streamlit
+python-dotenv
