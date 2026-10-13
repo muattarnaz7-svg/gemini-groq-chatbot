@@ -8,15 +8,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
+MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 SYSTEM_PROMPT = (
     "You are a helpful, friendly assistant. "
     "Reply in the same language the user writes in. "
     "Keep answers clear and simple."
 )
 MAX_TOKENS = 1000
-MAX_RETRIES = 3
-RETRY_DELAY_SECONDS = 1
+MAX_RETRIES = 5
+RETRY_DELAY_SECONDS = 2
 
 
 def create_client() -> genai.Client:
